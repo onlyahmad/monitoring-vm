@@ -438,9 +438,10 @@
   "templating": {
     "list": [
       {
+        "allValue": ".*",
         "current": {},
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": false,
         "name": "instance",
         "options": [],
