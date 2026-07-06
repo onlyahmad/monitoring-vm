@@ -32,7 +32,7 @@
     Di VM target, jalankan Node Exporter:
     
     bash
-    podman run -d --name node-exporter \
+    docker run -d --name node-exporter \
       --net host \
       --pid host \
       -v /proc:/host/proc:ro \
@@ -42,6 +42,9 @@
       --path.procfs=/host/proc \
       --path.sysfs=/host/sys \
       --path.rootfs=/rootfs
+      
+      docker update --restart unless-stopped node-exporter
+      
     
     
     Lalu edit /home/ion/Project/monitoring-vm/prometheus/prometheus.yml — ganti 192.168.1.100:9100 dengan IP VM target:
