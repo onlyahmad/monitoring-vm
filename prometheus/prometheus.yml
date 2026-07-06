@@ -32,3 +32,8 @@ scrape_configs:
   - job_name: "cadvisor"
     static_configs:
       - targets: ["cadvisor-vm:8080"]
+
+  # cAdvisor — remote VM
+  - job_name: "cadvisor-remote"
+    static_configs:
+      - targets: ["172.222.8.105:8080"]
